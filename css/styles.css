@@ -18,7 +18,12 @@
 /* ==========================
    2. DESIGN TOKENS
    ========================== */
-   :root {
+  :root {
+    /* ...existing tokens... */
+    --font-stack: system-ui, 'Segoe UI', Tahoma, sans-serif;
+    --color-surface-alt: #f1f5f9;
+    --radius-md: 8px; 
+
     /* Color */
     --color-bg: #faf3f3;
     --color-surface: #ffffff;
@@ -49,6 +54,9 @@
    3. BASE ELEMENT STYLES
    ========================== */
    body {
+    font-family: var(--font-stack);
+    /* ...existing Lab 05 declarations... */
+
     background-color: var(--color-bg);
     color: var(--color-text);
     font-size: var(--text-base);
