@@ -14,15 +14,14 @@
     height:auto;
     display:block;
    }
-
-
-
    
 /* ==========================
    2. DESIGN TOKENS
    ========================== */
   :root {
     /* ...existing tokens... */
+    --color-border: #e5e7eb; 
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1)
     --font-stack: system-ui, 'Segoe UI', Tahoma, sans-serif;
     --color-surface-alt: #f1f5f9;
     --radius-md: 8px; 
@@ -113,4 +112,17 @@ section { margin-bottom: var(--space-xl); }
     max-width: var(--page-width);
     margin: 0 auto;
     padding: var(--space-lg) var(--space-md);
+}
+.skills-grid {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+.skill-card {
+    flex: 1;
+    min-width: 12rem;
+    padding: var(--space-md);
+    background-color: var(--color-surface-alt);
+    border-radius: var(--radius-md);
 }
