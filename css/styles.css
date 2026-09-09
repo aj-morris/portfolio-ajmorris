@@ -74,6 +74,7 @@ p { margin-bottom: var(--space-md); }
 p:last-child { margin-bottom: 0; }
 
 a { color: var(--color-accent); }
+ul { padding-left: var(--space-lg); }
 
 /* ==========================
    4. LAYOUT
