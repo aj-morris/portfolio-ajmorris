@@ -22,7 +22,7 @@
   :root {
     /* ...existing tokens... */
     --color-border: #e5e7eb; 
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1)
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
     --font-stack: system-ui, 'Segoe UI', Tahoma, sans-serif;
     --color-surface-alt: #f1f5f9;
     --radius-md: 8px; 
@@ -131,27 +131,37 @@ a:focus-visible {
 }
 nav {
     padding: var(--space-md) 0;
+    margin-bottom: var(--space-lg);
 }
-nav a {
-    color: var(--color-text);
-    text-decoration: none;
-}
-nav a:hover { color: var(--color-accent); }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-        flex-wrap: wrap;
-    gap: var(--space-md);
+    width: 100%;
 }
-.nav-links { display: flex; gap: var(--space-lg); }
 
 .logo {
+    font-family: var(--font-serif);
     font-size: var(--text-h3);
-    font-weight: bold;
+    font-weight: 700;
     color: var(--color-text);
     text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--color-accent);
 }
 
 section { margin-bottom: var(--space-xl); }
