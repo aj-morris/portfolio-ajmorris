@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;700&display=swap');
 /* ==========================
    1. RESET
    ========================== */
@@ -56,13 +57,23 @@
    3. BASE ELEMENT STYLES
    ========================== */
    body {
-    font-family: var(--font-stack);
+    font-family: var(--font-serif);
     /* ...existing Lab 05 declarations... */
 
     background-color: var(--color-bg);
     color: var(--color-text);
     font-size: var(--text-base);
     line-height: var(--leading-body);
+}
+:root {
+    /* ...existing tokens... */
+    --font-stack: 'Inter', system-ui, -apple-system, sans-serif;   /* changed value */
+    --font-serif: 'Lora', Georgia, serif;                          /* new token */
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    line-height: var(--leading-heading);
 }
 
 h1 { font-size: var(--text-h1); line-height: var(--leading-heading); }
@@ -75,6 +86,11 @@ p:last-child { margin-bottom: 0; }
 
 a { color: var(--color-accent); }
 ul { padding-left: var(--space-lg); }
+
+a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
 
 /* ==========================
    4. LAYOUT
