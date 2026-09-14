@@ -19,7 +19,7 @@
 /* ==========================
    2. DESIGN TOKENS
    ========================== */
-  :root {
+
    :root {
     /* Colors */
     --color-bg: #faf3f3;
@@ -72,7 +72,7 @@
     background-color: var(--color-bg);
     color: var(--color-text);
     font-size: var(--text-base);
-    line-height: var(--leading-body);
+    line-height: var(--leading-body);}
 
 
 h1, h2, h3 {
@@ -177,7 +177,7 @@ main section {
     background-color: var(--color-surface);
     padding: var(--space-xl);
     margin-bottom: var(--space-xl);
-    border-radius: 12px;
+   border-radius: var(--radius-lg);
     box-shadow: var(--shadow-card);
 }
 
@@ -188,8 +188,8 @@ main section h2 {
     background-color: var(--color-surface);
     padding: var(--space-xl);
     margin-bottom: var(--space-xl);
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
 }
    body {
     max-width: var(--page-width);
@@ -223,7 +223,7 @@ main section h2 {
     padding: var(--space-lg);
     background-color: var(--color-surface-alt);
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     box-shadow: none;
 }
 
@@ -244,7 +244,7 @@ main section h2 {
     width: 280px;
     height: 350px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
 }
 
 .about-page-text {
