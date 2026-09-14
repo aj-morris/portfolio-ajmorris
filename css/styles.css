@@ -302,3 +302,61 @@ main section h2 {
 .resume-button:hover {
     opacity: 0.85;
 }
+
+/* ==========================
+   FEATURED WORK
+   ========================== */
+
+.featured-work-section {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.featured-work-section h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.featured-work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.featured-work-card {
+    background-color: var(--color-surface);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+}
+
+.featured-work-card h3 {
+    font-size: var(--text-h3);
+    margin-bottom: var(--space-sm);
+}
+
+.featured-work-card p {
+    font-size: var(--text-base);
+    line-height: var(--leading-body);
+    margin-bottom: var(--space-md);
+}
+
+.work-link {
+    margin-top: auto;
+    font-size: var(--text-base);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.work-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .featured-work-grid {
+        grid-template-columns: 1fr;
+    }
+}
