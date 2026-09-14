@@ -217,3 +217,88 @@ main section h2 {
     border-radius: 8px;
     box-shadow: none;
 }
+
+/* ==========================
+   ABOUT PAGE
+   ========================== */
+
+.about-overview {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-page-image {
+    flex: 0 0 280px;
+}
+
+.about-page-image img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-page-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-page-text h1 {
+    margin-bottom: var(--space-md);
+}
+
+
+/* Campus Involvement */
+
+.section-intro {
+    max-width: var(--reading-width);
+    margin-bottom: var(--space-lg);
+}
+
+.involvement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-lg);
+}
+
+.involvement-card {
+    background-color: var(--color-surface-alt);
+    padding: var(--space-lg);
+    border-radius: 10px;
+}
+
+.involvement-card h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.role-title {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+
+/* Resume */
+
+.resume-content {
+    max-width: var(--reading-width);
+}
+
+.resume-button {
+    display: inline-block;
+    margin-top: var(--space-md);
+    padding: 0.75rem 1.25rem;
+
+    background-color: var(--color-accent);
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+.resume-button:hover {
+    opacity: 0.85;
+}
