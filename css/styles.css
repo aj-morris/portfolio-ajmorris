@@ -20,38 +20,47 @@
    2. DESIGN TOKENS
    ========================== */
   :root {
-    /* ...existing tokens... */
-    --color-border: #e5e7eb; 
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-    --font-stack: system-ui, 'Segoe UI', Tahoma, sans-serif;
-    --color-surface-alt: #f1f5f9;
-    --radius-md: 8px; 
-
-    /* Color */
+   :root {
+    /* Colors */
     --color-bg: #faf3f3;
     --color-surface: #ffffff;
+    --color-surface-alt: #f1f5f9;
     --color-text: #1f2937;
     --color-muted: #6b7280;
     --color-accent: #0369a1;
+    --color-border: #e5e7eb;
+    --color-on-accent: #ffffff;
 
-    /* Spacing — a modular scale */
+    /* Spacing */
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 1.5rem;
     --space-xl: 2rem;
+    --space-button-y: 0.75rem;
+    --space-button-x: 1.25rem;
 
     /* Typography */
+    --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Lora', Georgia, serif;
+
     --text-base: 1rem;
     --text-h3: 1.25rem;
     --text-h2: 1.5rem;
     --text-h1: 2.25rem;
+
     --leading-body: 1.6;
     --leading-heading: 1.2;
 
+    /* Borders and shadows */
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-card: 0 2px 8px rgba(0,0,0,0.04);
+
     /* Layout */
     --page-width: 64rem;
-    --reading-width: 70ch;
-}
+    --reading-width: 70ch;}
+
 
 /* ==========================
    3. BASE ELEMENT STYLES
@@ -64,12 +73,7 @@
     color: var(--color-text);
     font-size: var(--text-base);
     line-height: var(--leading-body);
-}
-:root {
-    /* ...existing tokens... */
-    --font-stack: 'Inter', system-ui, -apple-system, sans-serif;   /* changed value */
-    --font-serif: 'Lora', Georgia, serif;                          /* new token */
-}
+
 
 h1, h2, h3 {
     font-family: var(--font-serif);
@@ -119,7 +123,7 @@ a:focus-visible {
     width: 240px;
     height: 300px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
 }
 .about-text { flex: 2; min-width: 16rem; max-width: var(--reading-width); }
 .header-text { flex: 1; min-width: 16rem; }
@@ -174,7 +178,7 @@ main section {
     padding: var(--space-xl);
     margin-bottom: var(--space-xl);
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-card);
 }
 
 main section h2 {
@@ -196,7 +200,7 @@ main section h2 {
     list-style: none;
     padding-left: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--space-md);
 }
 .skill-card {
@@ -223,14 +227,12 @@ main section h2 {
     box-shadow: none;
 }
 
-/* ==========================
-   ABOUT PAGE
-   ========================== */
+/* About Page */
 
 .about-overview {
     display: flex;
     align-items: center;
-    gap: 2rem;
+   gap: var(--space-xl);
     flex-wrap: wrap;
 }
 
@@ -254,7 +256,6 @@ main section h2 {
     margin-bottom: var(--space-md);
 }
 
-
 /* Campus Involvement */
 
 .section-intro {
@@ -264,14 +265,15 @@ main section h2 {
 
 .involvement-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--space-lg);
 }
+
 
 .involvement-card {
     background-color: var(--color-surface-alt);
     padding: var(--space-lg);
-    border-radius: 10px;
+    border-radius: var(--radius-lg);
 }
 
 .involvement-card h3 {
@@ -293,10 +295,10 @@ main section h2 {
 .resume-button {
     display: inline-block;
     margin-top: var(--space-md);
-    padding: 0.75rem 1.25rem;
+    padding: var(--space-button-y) var(--space-button-x);
 
     background-color: var(--color-accent);
-    color: white;
+    color: var(--color-on-accent);
 
     text-decoration: none;
     border-radius: 8px;
@@ -308,13 +310,11 @@ main section h2 {
     opacity: 0.85;
 }
 
-/* ==========================
-   FEATURED WORK
-   ========================== */
+/* Featured Work */
 
 .featured-work-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--space-md);
 }
 
@@ -348,9 +348,17 @@ main section h2 {
 .work-link:hover {
     text-decoration: underline;
 }
+@media (min-width: 768px) {
 
-@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .involvement-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .featured-work-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
