@@ -119,14 +119,13 @@ a:focus-visible {
     gap: var(--space-lg);
 }
 .about-image {
-    flex: 0 0 240px;
+    flex: 0 0 150px;
 }
 
 .about-image img {
-    width: 240px;
-    height: 300px;
+    width: 150px;
+    height: 190px;
     object-fit: cover;
-    object-position: center;
     border-radius: var(--radius-lg);
 }
 
