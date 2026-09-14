@@ -115,7 +115,12 @@ a:focus-visible {
     gap: var(--space-lg);
 }
 .about-image { flex: 1; min-width: 16rem; }
-.about-image img { width: 100%; border-radius: var(--radius-md); }
+.about-image img {
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
 .about-text { flex: 2; min-width: 16rem; max-width: var(--reading-width); }
 .header-text { flex: 1; min-width: 16rem; }
 .header-pic {
