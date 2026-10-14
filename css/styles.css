@@ -1,4 +1,3 @@
-<link> url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;700&display=swap')<link> ;
 /* ==========================
    1. RESET
    ========================== */
@@ -28,7 +27,6 @@
     --color-text: #1f2937;
     --color-muted: #6b7280;
     --color-accent: #0369a1;
-    --color-border: #e5e7eb;
     --color-on-accent: #ffffff;
 
     /* Spacing */
@@ -40,7 +38,6 @@
     --space-button-x: 1.25rem;
 
     /* Typography */
-    --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
     --font-serif: 'Lora', Georgia, serif;
 
     --text-base: 1rem;
@@ -54,7 +51,6 @@
     /* Borders and shadows */
     --radius-md: 8px;
     --radius-lg: 12px;
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
     --shadow-card: 0 2px 8px rgba(0,0,0,0.04);
 
     /* Layout */
@@ -67,12 +63,14 @@
    ========================== */
    body {
     font-family: var(--font-serif);
-    /* ...existing Lab 05 declarations... */
-
     background-color: var(--color-bg);
     color: var(--color-text);
     font-size: var(--text-base);
-    line-height: var(--leading-body);}
+    line-height: var(--leading-body);
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
+}
 
 
 h1, h2, h3 {
@@ -80,9 +78,9 @@ h1, h2, h3 {
     line-height: var(--leading-heading);
 }
 
-h1 { font-size: var(--text-h1); line-height: var(--leading-heading); }
-h2 { font-size: var(--text-h2); line-height: var(--leading-heading); }
-h3 { font-size: var(--text-h3); line-height: var(--leading-heading); }
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
 
 h1, h2, h3 { margin-bottom: var(--space-sm); }
 p { margin-bottom: var(--space-md); }
@@ -181,7 +179,8 @@ nav a:hover {
     color: var(--color-accent);
 }
 
-main section {
+main section,
+#resources {
     background-color: var(--color-surface);
     padding: var(--space-xl);
     margin-bottom: var(--space-xl);
@@ -191,18 +190,6 @@ main section {
 
 main section h2 {
     margin-bottom: var(--space-md);
-}
-#resources {
-    background-color: var(--color-surface);
-    padding: var(--space-xl);
-    margin-bottom: var(--space-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-}
-   body {
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--space-lg) var(--space-md);
 }
 .skills-grid {
     list-style: none;
@@ -215,24 +202,6 @@ main section h2 {
     padding: var(--space-md);
     background-color: var(--color-surface-alt);
     border-radius: var(--radius-md);
-}
-.project-list {
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-}
-@media (min-width: 768px) {
-    .project-list { grid-template-columns: 1fr 1fr; }
-    .project-card.featured { grid-column: span 2; }
-}
-.project-card {
-    padding: var(--space-lg);
-    background-color: var(--color-surface-alt);
-    border: none;
-    border-radius: var(--radius-md);
-    box-shadow: none;
 }
 
 /* About Page */
@@ -283,10 +252,6 @@ main section h2 {
     border-radius: var(--radius-lg);
 }
 
-.involvement-card h3 {
-    margin-bottom: var(--space-sm);
-}
-
 .role-title {
     font-weight: 600;
     color: var(--color-accent);
@@ -331,28 +296,6 @@ main section h2 {
 
     display: flex;
     flex-direction: column;
-}
-
-.featured-work-card h3 {
-    font-size: var(--text-h3);
-    margin-bottom: var(--space-sm);
-}
-
-.featured-work-card p {
-    font-size: var(--text-base);
-    line-height: var(--leading-body);
-    margin-bottom: var(--space-md);
-}
-
-.work-link {
-    margin-top: auto;
-    font-size: var(--text-base);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.work-link:hover {
-    text-decoration: underline;
 }
 
 @media (min-width: 768px) {
