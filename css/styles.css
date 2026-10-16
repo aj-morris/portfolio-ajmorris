@@ -240,7 +240,6 @@ main section h2 {
 /* Campus Involvement */
 
 .section-intro {
-    max-width: var(--reading-width);
     margin-bottom: var(--space-lg);
 }
 
@@ -264,7 +263,7 @@ main section h2 {
 /* Resume */
 
 .resume-content {
-    max-width: var(--reading-width);
+    width: 100%;
 }
 
 .resume-button {
@@ -327,6 +326,11 @@ h1, h2, h3 {
 }
 
 p { max-width: var(--reading-width); }
+
+#involvement p,
+#resume p {
+    max-width: none;
+}
 
 a {
     text-underline-offset: 0.2em;
