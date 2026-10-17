@@ -1,5 +1,14 @@
 # portfolio-ajmorris
 A Portfolio site built from scratch in HTML and CSS for WRIT 40363. It introduces who I am, what I am learning, and the work I have made. 
+Contains previous projects: 
+(<projects/project - Zed>)
+
+(<projects/project 1 - original>)
+
+(<projects/project 2-tracker>)
+
+(<projects/project 3-dashboard>)
+
 **Live site:** https://aj-morris.github.io/portfolio-ajmorris/
 
 ## Built with 
